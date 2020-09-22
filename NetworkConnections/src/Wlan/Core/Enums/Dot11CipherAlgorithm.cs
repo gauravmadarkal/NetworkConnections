@@ -1,6 +1,6 @@
 ﻿namespace NetworkConnections.src.Wlan.Core.Enums
 {
-    public enum Dot11CipherAlgorithm
+    internal enum Dot11CipherAlgorithm
     {
 
         /// DOT11_CIPHER_ALGO_NONE -> 0x00

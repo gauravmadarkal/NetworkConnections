@@ -49,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sample-usage\NetworkInformationHelper.cs" />
     <Compile Include="src\Client\Implementation\ConnectionInfo.cs" />
+    <Compile Include="src\Client\Implementation\INetworkInformation.cs" />
     <Compile Include="src\Client\Implementation\NetworkInformation.cs" />
     <Compile Include="src\Lan\Core\LanInfo.cs" />
     <Compile Include="src\Wlan\Core\Enums\Dot11AuthAlgorithm.cs" />

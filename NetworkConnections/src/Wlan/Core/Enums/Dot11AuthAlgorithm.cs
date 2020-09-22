@@ -1,6 +1,6 @@
 ﻿namespace NetworkConnections.src.Wlan.Core.Enums
 {
-    public enum Dot11AuthAlgorithm
+    internal enum Dot11AuthAlgorithm
     {
 
         /// DOT11_AUTH_ALGO_80211_OPEN -> 1

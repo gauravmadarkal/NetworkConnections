@@ -1,6 +1,6 @@
 ﻿namespace NetworkConnections.src.Wlan.Core.Enums
 {
-    public enum WlanIntfOpcode
+    internal enum WlanIntfOpcode
     {
 
         /// wlan_intf_opcode_autoconf_start -> 0x000000000

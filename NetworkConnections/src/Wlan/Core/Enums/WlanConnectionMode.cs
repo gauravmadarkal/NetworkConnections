@@ -1,6 +1,6 @@
 ﻿namespace NetworkConnections.src.Wlan.Core.Enums
 {
-    public enum WlanConnectionMode
+    internal enum WlanConnectionMode
     {
 
         wlan_connection_mode_profile,

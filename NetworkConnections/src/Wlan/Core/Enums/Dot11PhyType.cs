@@ -1,6 +1,6 @@
 ﻿namespace NetworkConnections.src.Wlan.Core.Enums
 {
-    public enum Dot11PhyType
+    internal enum Dot11PhyType
     {
 
         dot11_phy_type_unknown,

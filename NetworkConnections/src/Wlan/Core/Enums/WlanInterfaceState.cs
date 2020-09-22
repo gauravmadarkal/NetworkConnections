@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the state of the interface. e.g. connected, disconnected.
     /// </summary>
-    public enum WlanInterfaceState
+    internal enum WlanInterfaceState
     {
         /// <summary>
         /// wlan_interface_state_not_ready -> 0

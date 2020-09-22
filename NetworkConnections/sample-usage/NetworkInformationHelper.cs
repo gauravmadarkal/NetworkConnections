@@ -12,7 +12,7 @@ namespace NetworkConnections.sample_usage
     {
         public void FetchNetworkInfo()
         {
-            NetworkInformation networkInformation = new NetworkInformation();
+            INetworkInformation networkInformation = new NetworkInformation();
             ConnectionInfo connectionInfo = networkInformation.ConnectionInfo;
             string wifiSSID = connectionInfo.WlanInfo.SSID;
             bool isPasswordProtected = connectionInfo.WlanInfo.IsSecured;

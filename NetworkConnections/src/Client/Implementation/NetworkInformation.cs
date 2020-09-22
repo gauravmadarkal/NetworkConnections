@@ -17,7 +17,7 @@ namespace NetworkConnections.src.Client.Implementation
     /// <summary>
     /// this class fetches the connected network details
     /// </summary>
-    public class NetworkInformation
+    public class NetworkInformation : INetworkInformation
     {
         public NetworkInformation() { }
 
@@ -36,7 +36,7 @@ namespace NetworkConnections.src.Client.Implementation
         /// this method fetches the active connection details
         /// </summary>
         /// <returns>object containing wlaninfo and laninfo</returns>
-        internal ConnectionInfo GetConnectionDetails()
+        private ConnectionInfo GetConnectionDetails()
         {
             ConnectionInfo networkInfo = new ConnectionInfo
             {
@@ -122,7 +122,7 @@ namespace NetworkConnections.src.Client.Implementation
         /// This function gets all the adapters which are not virtual, loopback, tunnel or default
         /// </summary>
         /// <returns>a list of actively enabled adapters</returns>
-        internal List<string> GetActivePhysicalAdapters()
+        private List<string> GetActivePhysicalAdapters()
         {
             List<string> adapterIds = new List<string>();
             ManagementObjectSearcher mos = null;
@@ -161,7 +161,7 @@ namespace NetworkConnections.src.Client.Implementation
         /// This function fetches the ssid of wlan connection for the system
         /// </summary>
         /// <returns>A wlaninfo object which contains SSID and security info</returns>
-        public WlanInfo GetWirelessConnection()
+        private WlanInfo GetWirelessConnection()
         {
             WlanInfo wifiInfo = new WlanInfo();
             IntPtr handle = IntPtr.Zero;

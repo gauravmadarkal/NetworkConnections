@@ -1,10 +1,10 @@
-﻿using NetworkConnections.src.Lan.Core;
-using NetworkConnections.src.Wlan.Core.Models;
+﻿using NetworkConnections.Lan.Core;
+using NetworkConnections.Wlan.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetworkConnections.src.Client.Implementation
+namespace NetworkConnections.Client.Implementation
 {
     public class ConnectionInfo
     {

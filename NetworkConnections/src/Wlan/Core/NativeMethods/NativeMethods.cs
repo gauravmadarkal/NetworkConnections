@@ -1,8 +1,8 @@
-﻿using NetworkConnections.src.Wlan.Core.Enums;
+﻿using NetworkConnections.Wlan.Core.Enums;
 using System;
 using System.Runtime.InteropServices;
 
-namespace NetworkConnections.src.Wlan.Core.NativeMethods
+namespace NetworkConnections.Wlan.Core.NativeMethods
 {
     internal static class NativeMethods
     {

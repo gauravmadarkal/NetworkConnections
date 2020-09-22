@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkConnections.src.Client.Implementation
+namespace NetworkConnections.Client.Implementation
 {
     interface INetworkInformation
     {

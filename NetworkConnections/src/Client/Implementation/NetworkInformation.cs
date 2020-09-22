@@ -1,8 +1,8 @@
 ﻿using Microsoft.WindowsAPICodePack.Net;
-using NetworkConnections.src.Lan.Core;
-using NetworkConnections.src.Wlan.Core.Models;
-using NetworkConnections.src.Wlan.Core.NativeMethods;
-using NetworkConnections.src.Wlan.Core.Structs;
+using NetworkConnections.Lan.Core;
+using NetworkConnections.Wlan.Core.Models;
+using NetworkConnections.Wlan.Core.NativeMethods;
+using NetworkConnections.Wlan.Core.Structs;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -12,7 +12,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace NetworkConnections.src.Client.Implementation
+namespace NetworkConnections.Client.Implementation
 {
     /// <summary>
     /// this class fetches the connected network details

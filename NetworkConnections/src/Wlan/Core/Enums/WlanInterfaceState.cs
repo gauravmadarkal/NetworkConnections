@@ -1,4 +1,4 @@
-﻿namespace NetworkConnections.src.Wlan.Core.Enums
+﻿namespace NetworkConnections.Wlan.Core.Enums
 {
     /// <summary>
     /// Defines the state of the interface. e.g. connected, disconnected.

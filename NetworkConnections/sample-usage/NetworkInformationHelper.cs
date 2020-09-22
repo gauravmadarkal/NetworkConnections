@@ -1,5 +1,5 @@
-﻿using NetworkConnections.src.Client.Implementation;
-using NetworkConnections.src.Wlan.Core.Models;
+﻿using NetworkConnections.Client.Implementation;
+using NetworkConnections.Wlan.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

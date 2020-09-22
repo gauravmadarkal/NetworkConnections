@@ -1,4 +1,4 @@
-﻿namespace NetworkConnections.src.Wlan.Core.Enums
+﻿namespace NetworkConnections.Wlan.Core.Enums
 {
     internal enum WlanConnectionMode
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetworkConnections.src.Lan.Core
+namespace NetworkConnections.Lan.Core
 {
     /// <summary>
     /// Model class which represents the ethernet connection details

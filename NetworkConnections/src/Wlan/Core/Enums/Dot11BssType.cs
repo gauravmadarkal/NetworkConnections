@@ -1,5 +1,5 @@
 ﻿
-namespace NetworkConnections.src.Wlan.Core.Enums
+namespace NetworkConnections.Wlan.Core.Enums
 {
     /// <summary>
     /// Represents an 802.11 Basic Service Set type

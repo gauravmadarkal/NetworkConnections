@@ -1,4 +1,4 @@
-﻿using NetworkConnections.src.Wlan.Core.Enums;
+﻿using NetworkConnections.Wlan.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkConnections.src.Wlan.Core.Structs
+namespace NetworkConnections.Wlan.Core.Structs
 {
     internal class Structs
     {

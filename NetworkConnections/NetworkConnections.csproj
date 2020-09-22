@@ -65,7 +65,6 @@
     <Compile Include="src\Wlan\Core\Structs\Structs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="docs\README.md" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

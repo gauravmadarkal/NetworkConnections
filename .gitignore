@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/NetworkConnections/NetworkConnections.nuspec
+/NetworkConnections/nuget.exe

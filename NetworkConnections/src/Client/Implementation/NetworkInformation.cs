@@ -19,6 +19,9 @@ namespace NetworkConnections.Client.Implementation
     /// </summary>
     public class NetworkInformation : INetworkInformation
     {
+        /// <summary>
+        /// constructor
+        /// </summary>
         public NetworkInformation() { }
 
         /// <summary>

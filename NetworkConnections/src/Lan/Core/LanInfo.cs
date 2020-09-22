@@ -9,6 +9,9 @@ namespace NetworkConnections.Lan.Core
     /// </summary>
     public class LanInfo
     {
+        /// <summary>
+        /// lan network name
+        /// </summary>
         public string Name
         {
             get;

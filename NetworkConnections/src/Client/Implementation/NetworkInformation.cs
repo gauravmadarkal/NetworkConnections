@@ -14,8 +14,16 @@ using System.Text;
 
 namespace NetworkConnections.src.Client.Implementation
 {
+    /// <summary>
+    /// this class fetches the connected network details
+    /// </summary>
     public class NetworkInformation
     {
+        public NetworkInformation() { }
+
+        /// <summary>
+        /// this property has details about the lan and wifi connection
+        /// </summary>
         public ConnectionInfo ConnectionInfo
         {
             get
@@ -24,6 +32,10 @@ namespace NetworkConnections.src.Client.Implementation
             }
         }
         
+        /// <summary>
+        /// this method fetches the active connection details
+        /// </summary>
+        /// <returns>object containing wlaninfo and laninfo</returns>
         internal ConnectionInfo GetConnectionDetails()
         {
             ConnectionInfo networkInfo = new ConnectionInfo
@@ -35,6 +47,8 @@ namespace NetworkConnections.src.Client.Implementation
             {
                 List<string> adapters = GetActivePhysicalAdapters();
                 var networks = NetworkListManager.GetNetworks(NetworkConnectivityLevels.Connected);
+                // fetch all networks adapters that are active and running, 
+                // adapters which are not loopback or tunnel
                 NetworkInterface[] networkInterfaces = NetworkInterface
                     .GetAllNetworkInterfaces()
                     .Where(ninterface => ninterface.OperationalStatus == OperationalStatus.Up
@@ -43,7 +57,7 @@ namespace NetworkConnections.src.Client.Implementation
                     .ToArray();
                 foreach (NetworkInterface netInterface in networkInterfaces)
                 {
-                    foreach (Microsoft.WindowsAPICodePack.Net.Network network in networks)
+                    foreach (Network network in networks)
                     {
                         foreach (NetworkConnection conn in network.Connections)
                         {
@@ -51,13 +65,14 @@ namespace NetworkConnections.src.Client.Implementation
                             id = id.Substring(1, id.Length - 2);
                             id = id.ToUpper(CultureInfo.InvariantCulture);
 
+                            // compare the adapterid to fetch the right connection name
                             if (id.Equals(conn.AdapterId.ToString().ToUpper(CultureInfo.InvariantCulture), StringComparison.InvariantCultureIgnoreCase)
                                 && adapters.Contains(id))
                             {
                                 if (netInterface.NetworkInterfaceType == NetworkInterfaceType.Wireless80211)
                                 {
                                     networkInfo.WlanInfo = GetWirelessConnection();
-                                    networkInfo.WlanInfo.NetworkCategory = conn.Network.Category;
+                                    networkInfo.WlanInfo.NetworkCategory = GetNetworkCategory(conn.Network.Category);
                                     if (networkInfo.WlanInfo == null)
                                     {
                                         networkInfo.WlanInfo.SSID = conn.Network.Name;
@@ -82,6 +97,31 @@ namespace NetworkConnections.src.Client.Implementation
             }
         }
 
+        /// <summary>
+        /// mapper method
+        /// it takes the api code pack enum and returns a custom enum
+        /// </summary>
+        /// <param name="category">API code pack enum</param>
+        /// <returns>Network Cateory enum</returns>
+        private Wlan.Core.Models.NetworkCategory GetNetworkCategory(Microsoft.WindowsAPICodePack.Net.NetworkCategory category)
+        {
+            switch (category)
+            {
+                case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Public:
+                    return Wlan.Core.Models.NetworkCategory.Public;
+                case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Private:
+                    return Wlan.Core.Models.NetworkCategory.Private;
+                case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Authenticated:
+                    return Wlan.Core.Models.NetworkCategory.Authenticated;
+                default:
+                    return Wlan.Core.Models.NetworkCategory.Private;
+            }
+        }
+
+        /// <summary>
+        /// This function gets all the adapters which are not virtual, loopback, tunnel or default
+        /// </summary>
+        /// <returns>a list of actively enabled adapters</returns>
         internal List<string> GetActivePhysicalAdapters()
         {
             List<string> adapterIds = new List<string>();
@@ -106,14 +146,12 @@ namespace NetworkConnections.src.Client.Implementation
                 {
                     if (pd.Name.Equals("GUID"))
                     {
-                        //Console.WriteLine(pd.Name + ": " + (pd.Value ?? "N/A"));
                         string id = pd.Value.ToString();
                         id = id.Substring(1, id.Length - 2);
                         id = id.ToUpper(CultureInfo.InvariantCulture);
                         adapterIds.Add(id);
                     }
                 }
-                //Console.WriteLine("\n\n");
             }
             return adapterIds;
         }
@@ -122,7 +160,7 @@ namespace NetworkConnections.src.Client.Implementation
         /// <summary>
         /// This function fetches the ssid of wlan connection for the system
         /// </summary>
-        /// <returns>A wifiInfo object which contains SSID and authenticated flag</returns>
+        /// <returns>A wlaninfo object which contains SSID and security info</returns>
         public WlanInfo GetWirelessConnection()
         {
             WlanInfo wifiInfo = new WlanInfo();

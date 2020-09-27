@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetworkConnections.Interfaces\NetworkConnections.Interfaces.csproj" />
     <ProjectReference Include="..\NetworkConnections.Models\NetworkConnections.Models.csproj" />
-    <ProjectReference Include="..\NetworkConnections.Windows\NetworkConnections.Windows.csproj" />
   </ItemGroup>
 
 </Project>

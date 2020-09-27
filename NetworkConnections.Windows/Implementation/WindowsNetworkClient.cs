@@ -1,8 +1,10 @@
 ﻿using Microsoft.WindowsAPICodePack.Net;
+using NetworkConnections.Interfaces;
 using NetworkConnections.Lan.Core;
-using NetworkConnections.Wlan.Core.Models;
-using NetworkConnections.Wlan.Core.NativeMethods;
-using NetworkConnections.Wlan.Core.Structs;
+using NetworkConnections.Models;
+using NetworkConnections.Models.Wlan;
+using NetworkConnections.Windows.Wlan.Core.NativeMethods;
+using NetworkConnections.Windows.Wlan.Core.Structs;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -12,17 +14,18 @@ using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace NetworkConnections.Client.Implementation
+namespace NetworkConnections.Windows.Implementation
 {
     /// <summary>
     /// this class fetches the connected network details
     /// </summary>
-    public class NetworkInformation : INetworkInformation
+    public class WindowsNetworkClient : INetworkClient
     {
+        
         /// <summary>
         /// constructor
         /// </summary>
-        public NetworkInformation() { }
+        public WindowsNetworkClient() { }
 
         /// <summary>
         /// this property has details about the lan and wifi connection
@@ -106,18 +109,18 @@ namespace NetworkConnections.Client.Implementation
         /// </summary>
         /// <param name="category">API code pack enum</param>
         /// <returns>Network Cateory enum</returns>
-        private Wlan.Core.Models.NetworkCategory GetNetworkCategory(Microsoft.WindowsAPICodePack.Net.NetworkCategory category)
+        private Models.Wlan.NetworkCategory GetNetworkCategory(Microsoft.WindowsAPICodePack.Net.NetworkCategory category)
         {
             switch (category)
             {
                 case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Public:
-                    return Wlan.Core.Models.NetworkCategory.Public;
+                    return Models.Wlan.NetworkCategory.Public;
                 case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Private:
-                    return Wlan.Core.Models.NetworkCategory.Private;
+                    return Models.Wlan.NetworkCategory.Private;
                 case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Authenticated:
-                    return Wlan.Core.Models.NetworkCategory.Authenticated;
+                    return Models.Wlan.NetworkCategory.Authenticated;
                 default:
-                    return Wlan.Core.Models.NetworkCategory.Private;
+                    return Models.Wlan.NetworkCategory.Private;
             }
         }
 

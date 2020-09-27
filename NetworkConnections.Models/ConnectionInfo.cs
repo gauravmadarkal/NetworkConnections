@@ -1,22 +1,22 @@
 ﻿using NetworkConnections.Lan.Core;
-using NetworkConnections.Wlan.Core.Models;
+using NetworkConnections.Models.Wlan;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetworkConnections.Client.Implementation
+namespace NetworkConnections.Models
 {
     public class ConnectionInfo
     {
         public LanInfo LanInfo
         {
             get;
-            internal set;
+            set;
         }
         public WlanInfo WlanInfo
         {
             get;
-            internal set;
+            set;
         }
     }
 }

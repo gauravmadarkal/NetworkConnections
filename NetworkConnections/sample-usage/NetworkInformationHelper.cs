@@ -1,5 +1,7 @@
-﻿using NetworkConnections.Client.Implementation;
-using NetworkConnections.Wlan.Core.Models;
+﻿
+using NetworkConnections.Interfaces;
+using NetworkConnections.Models;
+using NetworkConnections.Models.Wlan;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,7 @@ namespace NetworkConnections.sample_usage
     {
         public void FetchNetworkInfo()
         {
-            INetworkInformation networkInformation = new NetworkInformation();
+            INetworkClient networkInformation = new NetworkInformation();
             ConnectionInfo connectionInfo = networkInformation.ConnectionInfo;
             string wifiSSID = connectionInfo.WlanInfo.SSID;
             bool isPasswordProtected = connectionInfo.WlanInfo.IsSecured;

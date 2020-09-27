@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetworkConnections.Wlan.Core.Models
+namespace NetworkConnections.Models.Wlan
 {
     /// <summary>
     /// Model class which represents the wireless 802.11 connection details
@@ -11,17 +11,17 @@ namespace NetworkConnections.Wlan.Core.Models
     {
         public string SSID { 
             get;
-            internal set;
+            set;
         }
         public bool IsSecured
         {
             get;
-            internal set;
+            set;
         }
         public NetworkCategory NetworkCategory
         {
             get;
-            internal set;
+             set;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace NetworkConnections.Lan.Core
         public string Name
         {
             get;
-            internal set;
+            set;
         }
     }
 }

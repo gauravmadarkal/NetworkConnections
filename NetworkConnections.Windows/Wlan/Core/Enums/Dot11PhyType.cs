@@ -1,4 +1,4 @@
-﻿namespace NetworkConnections.Wlan.Core.Enums
+﻿namespace NetworkConnections.Windows.Wlan.Core.Enums
 {
     internal enum Dot11PhyType
     {

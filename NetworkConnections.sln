@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkConnections.Models", "NetworkConnections.Models\NetworkConnections.Models.csproj", "{266579DB-B605-4A9E-83D0-927973ECE741}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E71B16C2-9D3F-4456-96C9-0511C2CD03C7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkConnections.Interfaces", "NetworkConnections.Interfaces\NetworkConnections.Interfaces.csproj", "{4F6C76EA-F1DE-44F3-AA07-F36D5414CEBD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkConnections", "NetworkConnections\NetworkConnections.csproj", "{FD31C9D8-D103-4D52-A323-6C8E38EB5A50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkConnections.Windows", "NetworkConnections.Windows\NetworkConnections.Windows.csproj", "{7992EAEC-8F0D-411E-93FB-6D0005589EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkConnections.Sample", "NetworkConnections.Sample\NetworkConnections.Sample.csproj", "{33299962-E7A0-495A-882F-D9BB7987291D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkConnections.Common", "NetworkConnections.Common\NetworkConnections.Common.csproj", "{F92C8BE8-6FF5-47C4-8DD2-F44385F5F2E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{266579DB-B605-4A9E-83D0-927973ECE741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{266579DB-B605-4A9E-83D0-927973ECE741}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{266579DB-B605-4A9E-83D0-927973ECE741}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{266579DB-B605-4A9E-83D0-927973ECE741}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F6C76EA-F1DE-44F3-AA07-F36D5414CEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F6C76EA-F1DE-44F3-AA07-F36D5414CEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F6C76EA-F1DE-44F3-AA07-F36D5414CEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F6C76EA-F1DE-44F3-AA07-F36D5414CEBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD31C9D8-D103-4D52-A323-6C8E38EB5A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD31C9D8-D103-4D52-A323-6C8E38EB5A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD31C9D8-D103-4D52-A323-6C8E38EB5A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,15 +27,22 @@ Global
 		{7992EAEC-8F0D-411E-93FB-6D0005589EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7992EAEC-8F0D-411E-93FB-6D0005589EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7992EAEC-8F0D-411E-93FB-6D0005589EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33299962-E7A0-495A-882F-D9BB7987291D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33299962-E7A0-495A-882F-D9BB7987291D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33299962-E7A0-495A-882F-D9BB7987291D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33299962-E7A0-495A-882F-D9BB7987291D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F92C8BE8-6FF5-47C4-8DD2-F44385F5F2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92C8BE8-6FF5-47C4-8DD2-F44385F5F2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92C8BE8-6FF5-47C4-8DD2-F44385F5F2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92C8BE8-6FF5-47C4-8DD2-F44385F5F2E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{266579DB-B605-4A9E-83D0-927973ECE741} = {E71B16C2-9D3F-4456-96C9-0511C2CD03C7}
-		{4F6C76EA-F1DE-44F3-AA07-F36D5414CEBD} = {E71B16C2-9D3F-4456-96C9-0511C2CD03C7}
 		{FD31C9D8-D103-4D52-A323-6C8E38EB5A50} = {E71B16C2-9D3F-4456-96C9-0511C2CD03C7}
 		{7992EAEC-8F0D-411E-93FB-6D0005589EAE} = {E71B16C2-9D3F-4456-96C9-0511C2CD03C7}
+		{F92C8BE8-6FF5-47C4-8DD2-F44385F5F2E5} = {E71B16C2-9D3F-4456-96C9-0511C2CD03C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5C39CB7-F354-4997-92FD-61CA5E4A4369}

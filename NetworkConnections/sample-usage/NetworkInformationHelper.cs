@@ -1,7 +1,8 @@
 ﻿
-using NetworkConnections.Interfaces;
-using NetworkConnections.Models;
-using NetworkConnections.Models.Wlan;
+
+using NetworkConnections.Common.Interfaces;
+using NetworkConnections.Common.Models;
+using NetworkConnections.Common.Models.Wlan;
 using System;
 using System.Collections.Generic;
 using System.Linq;

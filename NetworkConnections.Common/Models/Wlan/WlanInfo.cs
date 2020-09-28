@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetworkConnections.Models.Wlan
+namespace NetworkConnections.Common.Models.Wlan
 {
     /// <summary>
     /// Model class which represents the wireless 802.11 connection details

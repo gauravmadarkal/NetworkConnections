@@ -1,8 +1,8 @@
 ﻿using Microsoft.WindowsAPICodePack.Net;
-using NetworkConnections.Interfaces;
-using NetworkConnections.Lan.Core;
-using NetworkConnections.Models;
-using NetworkConnections.Models.Wlan;
+using NetworkConnections.Common.Interfaces;
+using NetworkConnections.Common.Models;
+using NetworkConnections.Common.Models.Lan.Core;
+using NetworkConnections.Common.Models.Wlan;
 using NetworkConnections.Windows.Wlan.Core.NativeMethods;
 using NetworkConnections.Windows.Wlan.Core.Structs;
 using System;
@@ -109,18 +109,18 @@ namespace NetworkConnections.Windows.Implementation
         /// </summary>
         /// <param name="category">API code pack enum</param>
         /// <returns>Network Cateory enum</returns>
-        private Models.Wlan.NetworkCategory GetNetworkCategory(Microsoft.WindowsAPICodePack.Net.NetworkCategory category)
+        private Common.Models.Wlan.NetworkCategory GetNetworkCategory(Microsoft.WindowsAPICodePack.Net.NetworkCategory category)
         {
             switch (category)
             {
                 case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Public:
-                    return Models.Wlan.NetworkCategory.Public;
+                    return Common.Models.Wlan.NetworkCategory.Public;
                 case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Private:
-                    return Models.Wlan.NetworkCategory.Private;
+                    return Common.Models.Wlan.NetworkCategory.Private;
                 case Microsoft.WindowsAPICodePack.Net.NetworkCategory.Authenticated:
-                    return Models.Wlan.NetworkCategory.Authenticated;
+                    return Common.Models.Wlan.NetworkCategory.Authenticated;
                 default:
-                    return Models.Wlan.NetworkCategory.Private;
+                    return Common.Models.Wlan.NetworkCategory.Private;
             }
         }
 

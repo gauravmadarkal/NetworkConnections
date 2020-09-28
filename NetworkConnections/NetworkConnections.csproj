@@ -2,12 +2,33 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0.3</Version>
+    <Authors>Gaurav Madarkal</Authors>
+    <Description>This is a DotNet standard package built for the sole purpose of simplifying the process of network connection information retrieval, this is a cross platform library which can be extended to linux and osx. Feel free to contribute to other platforms. This library is also culture independent, it works on any locale whatsoever</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/gauravmadarkal/NetworkConnections</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/gauravmadarkal/NetworkConnections</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>NetworkConnections NetworkDetails Network ConnectionDetails Connections WIFI LAN Ethernet</PackageTags>
+    <PackageReleaseNotes>Cross Platform enabled</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetworkConnections.Interfaces\NetworkConnections.Interfaces.csproj" />
-    <ProjectReference Include="..\NetworkConnections.Models\NetworkConnections.Models.csproj" />
+    <None Remove="NetworkConnections.nuspec" />
+    <None Remove="nuget.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetworkConnections.Common\NetworkConnections.Common.csproj" />
     <ProjectReference Include="..\NetworkConnections.Windows\NetworkConnections.Windows.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
-﻿using NetworkConnections.Interfaces;
-using NetworkConnections.Models;
+﻿using NetworkConnections.Common.Interfaces;
+using NetworkConnections.Common.Models;
 using NetworkConnections.Windows.Implementation;
 using System;
 using System.Runtime.InteropServices;

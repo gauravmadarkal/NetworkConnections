@@ -1,11 +1,11 @@
-﻿using NetworkConnections.Models;
+﻿using NetworkConnections.Common.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkConnections.Interfaces
+namespace NetworkConnections.Common.Interfaces
 {
     /// <summary>
     /// fetches the connected network details

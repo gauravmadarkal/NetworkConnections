@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetworkConnections.Models.Wlan
+namespace NetworkConnections.Common.Models.Wlan
 {
     /// <summary>
     /// Specifies the trust level for a network.

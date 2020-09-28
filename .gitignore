@@ -340,3 +340,5 @@ ASALocalRun/
 healthchecksdb
 /NetworkConnections/NetworkConnections.nuspec
 /NetworkConnections/nuget.exe
+/NetworkConnections.Common/nuget.exe
+/NetworkConnections.Common/NetworkConnections.nuspec

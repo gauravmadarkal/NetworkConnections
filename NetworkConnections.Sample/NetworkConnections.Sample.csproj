@@ -33,6 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetworkConnections.Windows.1.0.0.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="NetworkConnections, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetworkConnections.1.0.0.4\lib\netstandard2.0\NetworkConnections.dll</HintPath>
+    </Reference>
+    <Reference Include="NetworkConnections.Common, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetworkConnections.Windows.1.0.0.1\lib\NetworkConnections.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NetworkConnections.Windows, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetworkConnections.Windows.1.0.0.1\lib\NetworkConnections.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,16 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NetworkConnections.Common\NetworkConnections.Common.csproj">
-      <Project>{F92C8BE8-6FF5-47C4-8DD2-F44385F5F2E5}</Project>
-      <Name>NetworkConnections.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NetworkConnections\NetworkConnections.csproj">
-      <Project>{fd31c9d8-d103-4d52-a323-6c8e38eb5a50}</Project>
-      <Name>NetworkConnections</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
